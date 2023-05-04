@@ -11,7 +11,7 @@ class AdViewSet(ModelViewSet):
 
     default_permission = [AllowAny]
     permissions = {
-        'create': [IsAuthenticated],
+        'retrieve': [IsAuthenticated],
         'update': [IsAuthenticated, IsOwner | IsStaff],
         'partial_update': [IsAuthenticated, IsOwner | IsStaff],
         'destroy': [IsAuthenticated, IsOwner | IsStaff]
@@ -19,6 +19,7 @@ class AdViewSet(ModelViewSet):
 
     serializers = {
         'list': AdListSerializer,
+        'create': AdCreateSerializer,
         'retrieve': AdDetailSerializer,
     }
 

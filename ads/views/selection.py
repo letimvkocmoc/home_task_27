@@ -1,7 +1,7 @@
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.viewsets import ModelViewSet
 
-from ads.permissions import IsOwner, IsStaff
+from ads.permissions import IsOwner
 from ads.serializers import *
 
 
